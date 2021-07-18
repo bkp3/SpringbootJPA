@@ -102,9 +102,21 @@ public class SpringbootJpaApplication {
 		
 		//deleteById(2)
 		
-		userRepository.deleteById(2);
-		System.out.println("deleted");
+//		userRepository.deleteById(2);
+//		System.out.println("deleted");
+//		
+//		data getting from Derived Query Methods
 		
+//		List<User>user=userRepository.findByName("Mohit");
+//		for(User x:user) {
+//			System.out.println(x);
+//		}
+//		
+		
+		List<User>users=userRepository.findByNameAndCity("Mohit", "Chennai");
+		for(User x:users) {
+			System.out.println(x);
+		}
 		System.out.println("Done");
 	}
 

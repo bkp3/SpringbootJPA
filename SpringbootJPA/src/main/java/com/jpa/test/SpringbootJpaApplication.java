@@ -113,10 +113,32 @@ public class SpringbootJpaApplication {
 //		}
 //		
 		
-		List<User>users=userRepository.findByNameAndCity("Mohit", "Chennai");
+//		List<User>users=userRepository.findByNameAndCity("Mohit", "Chennai");
+//		for(User x:users) {
+//			System.out.println(x);
+//		}
+//		
+//		
+		
+		//Executing JPQL Queries with Spring Data  
+		
+//		List<User>users=userRepository.getAllUsers();
+//		for(User x:users) {
+//			System.out.println(x);
+//		}
+		
+//		List<User>users=userRepository.getAllUsersByNameAndCity("Mukesh","Kolkata");
+//		for(User x:users) {
+//			System.out.println(x);
+//		}
+		
+		//Executing Native Queries with Spring Data
+		
+		List<User>users=userRepository.getUsers();
 		for(User x:users) {
 			System.out.println(x);
 		}
+		
 		System.out.println("Done");
 	}
 
